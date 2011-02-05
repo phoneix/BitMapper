@@ -14,7 +14,7 @@ public class StartScreen extends Activity {
         
         Button connectButton = (Button) findViewById(R.id.connectButton);
         connectButton.setOnClickListener(new View.OnClickListener() {
-			
+
         	public void onClick(View view)
         	{
         		//Intent iConnection = new Intent(this, StartConnection.class);
