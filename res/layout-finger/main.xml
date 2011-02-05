@@ -11,28 +11,38 @@
     	android:gravity="center_horizontal"
     	android:textSize="25sp"
     />
+    <LinearLayout
+    	android:layout_height="25sp"
+    />
+	<Button 
+		android:id="@+id/connectButton"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"  
+		android:padding="25sp" 
+		android:text="Start a Shared Map" 
+		android:layout_gravity="center_horizontal"
+	/>
+	/>
     <Button 
     	android:layout_width="wrap_content" 
     	android:layout_height="wrap_content" 
-    	android:id="@+id/newButton" 
-    	android:text="Create New Map"
+    	android:id="@+id/joinButton" 
+    	android:text="Join a Shared Map"
     	android:padding="25sp"
-    	android:gravity="center_horizontal"
+    	android:layout_centerHorizontal="true"
+    	android:layout_centerInParent="true"
+    	android:layout_gravity="center_horizontal"
     />
 	<Button 
 		android:layout_width="wrap_content" 
 		android:layout_height="wrap_content" 
-		android:id="@+id/oldButton" 
-		android:text="Edit Map"
+		android:id="@+id/soloButton" 
+		android:text="Work Alone"
 		android:padding="25sp"
-		android:gravity="center_horizontal"
+		android:layout_centerHorizontal="true"
+		android:layout_centerInParent="true"
+		android:layout_gravity="center_horizontal"
 	/>
-	<Button 
-		android:layout_width="wrap_content" 
-		android:layout_height="wrap_content" 
-		android:id="@+id/connectButton" 
-		android:text="Connect to another Map"
-		android:padding="25sp"
-		android:gravity="center_horizontal"
-	/>
+	
+
 </LinearLayout>
