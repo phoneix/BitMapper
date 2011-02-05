@@ -2,17 +2,21 @@
 <LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="fill_parent"
-  android:layout_height="fill_parent">
+  android:layout_height="fill_parent"
+  android:orientation="vertical">
   	<TextView
   		android:id="@+id/choose"
   		android:text="Choose a Map to Edit:"
   		android:layout_width="fill_parent"
   		android:layout_height="wrap_content"
   		android:layout_above="@+id/newButt"
+  		android:textSize="15sp"
   	/>
-	<LinearLayout
-		android:layout_width="fill_parent"
-  		android:layout_height="fill_parent">
+  	<LinearLayout
+  		android:id="@+id/newBox"
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"
+  		android:orientation="horizontal">
   		<Button
   			android:layout_width="fill_parent" 
   			android:id="@+id/newButt" 
@@ -20,7 +24,12 @@
   			android:text="Create New Map..."
   			android:layout_below="@+id/choose"
   		/>
+  	</LinearLayout>
+	<LinearLayout
+		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content">
   		<ListView
+  			android:id="@+id/android:list"
   			android:layout_width="fill_parent"
   			android:layout_height="fill_parent"
   		/>

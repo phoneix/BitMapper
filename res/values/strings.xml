@@ -3,4 +3,5 @@
 	<string name="title">Bit Mapper Concept Maps</string>
 	<string name="app_name">Bit Mapper</string>
 	<string name="no_maps">No Maps Yet</string>
+	<string name="menu_delete">Delete Map</string>
 </resources>
