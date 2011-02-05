@@ -40,7 +40,7 @@ public class startScreen extends Activity {
         	{
         		
         	}
-		});
+        });
     }
     
     /*
