@@ -1,53 +1,45 @@
 package com.phoneix.bitmapper;
 
-import com.phoneix.bitmapper.R;
-
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class startScreen extends Activity {
+public class StartScreen extends Activity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.start_screen);
         
-        Button newButton = (Button) findViewById(R.id.newButton);
-        newButton.setOnClickListener(new View.OnClickListener() {
+        Button connectButton = (Button) findViewById(R.id.connectButton);
+        connectButton.setOnClickListener(new View.OnClickListener() {
 			
         	public void onClick(View view)
         	{
-        		
+        		//Intent iConnection = new Intent(this, StartConnection.class);
+            	//startActivity(iConnection);
         	}
 		});
         
-        Button oldButton = (Button) findViewById(R.id.oldButton);
+        Button joinButton = (Button) findViewById(R.id.joinButton);
         
-        oldButton.setOnClickListener(new View.OnClickListener() {
+        joinButton.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View view)
         	{
-        		
+        		//Intent iJoin = new Intent(this, JoinConnection.class);
+            	//startActivity(iJoin);
         	}
 		});
         
-        Button connectButton = (Button) findViewById(R.id.connectButton);
+        Button soloButton = (Button) findViewById(R.id.soloButton);
         
-        connectButton.setOnClickListener(new View.OnClickListener() {
+        soloButton.setOnClickListener(new View.OnClickListener() {
 	     	public void onClick(View view)
         	{
-        		
+	     		//Intent iSelectMap = new Intent(this, SelectMap.class);
+	        	//startActivity(iSelectMap);
         	}
         });
     }
-    
-    /*
-	private void startSearch()
-    {
-    	Intent iSearch = new Intent(this, SearchMenu.class);
-    	startActivity(iSearch);
-    }
-    */
 }

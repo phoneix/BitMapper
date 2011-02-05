@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -22,11 +23,10 @@
 		android:text="Start a Shared Map" 
 		android:layout_gravity="center_horizontal"
 	/>
-	/>
     <Button 
+    	android:id="@+id/joinButton"
     	android:layout_width="wrap_content" 
-    	android:layout_height="wrap_content" 
-    	android:id="@+id/joinButton" 
+    	android:layout_height="wrap_content"  
     	android:text="Join a Shared Map"
     	android:padding="25sp"
     	android:layout_centerHorizontal="true"
@@ -34,15 +34,13 @@
     	android:layout_gravity="center_horizontal"
     />
 	<Button 
+		android:id="@+id/soloButton" 
 		android:layout_width="wrap_content" 
 		android:layout_height="wrap_content" 
-		android:id="@+id/soloButton" 
 		android:text="Work Alone"
 		android:padding="25sp"
 		android:layout_centerHorizontal="true"
 		android:layout_centerInParent="true"
 		android:layout_gravity="center_horizontal"
 	/>
-	
-
 </LinearLayout>
