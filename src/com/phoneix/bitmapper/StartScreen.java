@@ -1,12 +1,17 @@
 package com.phoneix.bitmapper;
 
 import android.app.Activity;
+import android.bluetooth.BluetoothAdapter;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class StartScreen extends Activity {
+	private final Context mContext = this;
+	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -19,7 +24,15 @@ public class StartScreen extends Activity {
 
         	public void onClick(View view)
         	{
-        		//startNext(CreateConnection.class);
+        		// Make sure Bluetooth is supported
+        		if(BluetoothAdapter.getDefaultAdapter() == null) {
+                	Toast.makeText(getApplicationContext(), "Device does not support Bluetooth", 
+                			Toast.LENGTH_SHORT).show();
+                	finish();
+                } else {
+                	Intent iServer = new Intent(mContext, BtServerConnect.class);
+                	startNext(iServer);
+                }
         	}
 		});
         
@@ -28,7 +41,15 @@ public class StartScreen extends Activity {
         joinButton.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View view)
         	{
-        		//startNext(JoinConnection.class);
+        		// Make sure Bluetooth is supported
+        		if(BluetoothAdapter.getDefaultAdapter() == null) {
+                	Toast.makeText(getApplicationContext(), "Device does not support Bluetooth", 
+                			Toast.LENGTH_SHORT).show();
+                	finish();
+                } else {
+                	Intent iClient = new Intent(mContext, BtClientConnect.class);
+                	startNext(iClient);
+                }
         	}
 		});
         
@@ -37,14 +58,15 @@ public class StartScreen extends Activity {
         soloButton.setOnClickListener(new View.OnClickListener() {
 	     	public void onClick(View view)
         	{
-	     		startNext(SelectMap.class);
+	     		Intent iSelect = new Intent(mContext, SelectMap.class);
+	     		iSelect.putExtra("BluetoothStatus", 0);
+	     		startNext(iSelect);
         	}
         });
     }
     
-    private void startNext(Class next)
+    private void startNext(Intent I)
     {
-    	Intent iSearch = new Intent(this, next);
-    	startActivity(iSearch);
+    	startActivity(I);
     }
 }

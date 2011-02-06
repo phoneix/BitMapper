@@ -54,7 +54,7 @@ public class SelectMap extends ListActivity {
     
     private void fillData() {
     	File[] maps = mDirectory.listFiles();
-        ArrayAdapter<File> listAdp = new ArrayAdapter<File>(this, R.layout.map_list_item, maps);
+        ArrayAdapter<File> listAdp = new ArrayAdapter<File>(this, R.layout.list_item, maps);
         setListAdapter(listAdp);
     }
     
@@ -93,6 +93,7 @@ public class SelectMap extends ListActivity {
     	fillData();
     }
     
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     	if(requestCode == GET_FILE_NAME) { // The Activity was providing a file name
     		if(resultCode == RESULT_OK) { // A name was provided
